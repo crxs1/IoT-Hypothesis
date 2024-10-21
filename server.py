@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file #Used to simulate a simple webclient
 from statistics import mean, stdev
-from datetime import datetime, timedelta
-import pandas as pd
+from datetime import datetime, timedelta # Used to measure time
+import pandas as pd # A data science module whICh was intended to be used to identify normal queries
 
 app = Flask(__name__)
 
@@ -79,13 +79,13 @@ def home():
     <!doctype html>
     <html lang="en">
     <head>
-      <title>IoT Automotive Dashboard</title>
+      <title> Home Surveillance Dashboard</title>
     </head>
     <body>
-      <h1>Welcome to the IoT Automotive ServerDashboard</h1>
+      <h1>Welcome to your Home Surveillance Dashboard!</h1>
       <ul>
         <li><a href="/query?q=info1">Query Data</a></li>
-        <li><a href="/status">Check Device Status</a></li>
+        <li><a href="/status">Check Intruder Status</a></li>
         <li><a href="/admin">Admin Panel</a></li>
       </ul>
     </body>
@@ -151,7 +151,7 @@ def device_status():
     status = {
         "device_id": "12345",
         "status": "online",
-        "uptime": "48 hours",
+        "Person Detected?": "Yes",
         "ip": client_ip
     }
 

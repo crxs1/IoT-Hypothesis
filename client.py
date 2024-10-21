@@ -17,9 +17,9 @@ def send_anomalous_request():
 # Function to simulate sending sensor data to the server
 def send_sensor_data():
     sensor_data = {
-        "temperature": 23.5,
-        "humidity": 60,
-        "pressure": 1012
+        "Detected User": 1,
+        "App Detected":0 ,
+        "Alarm Request Sent?": 1,
     }
     response = requests.post('http://localhost:8080/sensor', json=sensor_data)
     print('Sensor data:', response.json())
